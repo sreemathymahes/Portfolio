@@ -4,63 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sreemathy Maheswaramoorthy - GIS Analyst Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #6ccdeb;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            margin: 0;
-        }
-        h2 {
-            margin-top: 10px;
-            color: #010c0f;
-        }
-        .intro, .overview, .highlights {
-            margin-bottom: 20px;
-        }
-        .highlights ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .highlights ul li {
-            background: #fff;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        a {
-            color:#6ccdeb;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -80,12 +24,73 @@
 
         <section class="highlights">
             <h2>Highlights of My Best Work</h2>
-            <ul>
-                <li><a href="#">Time-Evolving 3D City Model</a>: Developed an interactive web-based 3D model for Den Haag, showcasing dynamic city evolution using FME Form and CesiumJS.</li>
-                <li><a href="#">Satellite Image Classification</a>: Designed a land use classification model with Python and TensorFlow, integrating ETL workflows for spatial data analysis.</li>
-                <li><a href="#">Actual Evapo-Transpiration and Interception using WaPOR Data</a>: Created Seasonal AETI maps for Fezzen area using WaPOR data in Python.</li>
-            </ul>
+            <div class="highlight" onclick="openModal('modal1')">
+                <h2>Time-Evolving 3D City Model</h2>
+            </div>
+            <div class="highlight" onclick="openModal('modal2')">
+                <h2>Satellite Image Classification</h>
+            </div>
+            <div class="highlight" onclick="openModal('modal3')">
+                <h2>Actual Evapo-Transpiration and Interception using WaPOR Data</h2>
+            </div>
         </section>
+    </div>
+
+    <!-- Modals for each project -->
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Time-Evolving 3D City Model</h2>
+            <p>This project involved developing an interactive 3D model of Den Haag using FME Form and CesiumJS. The model dynamically showcases city evolution, enabling urban planners to visualize growth over time.</p>
+            <p><a href="https://github.com/yourgithubprofile/3d-city-model" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>Satellite Image Classification</h3>
+            <p>The rising availability of remote sensing (RS) imagery has spurred the demand for automatic interpretation algorithms, which are critical for a variety of applications including environmental monitoring, disaster management, and urban planning. The availability of benchmark datasets is a critical component in the development of such algorithms, as they serve as the foundation for training and assessing intelligent interpretation models specific to RS images. However, developing benchmark datasets for RS image interpretation presents considerable hurdles. These problems include correct dataset annotation, ensuring variety, controlling scale, and ensuring representativeness. Overcoming these challenges is critical for promoting the development of robust and dependable interpretation algorithms. Additionally, finding the right techniques and algorithm for RS image interpretation can be challenging. With the complexity and diversity of RS imagery, selecting an algorithm that can effectively analyze and interpret the data requires careful consideration of factors such as dataset characteristics, algorithm performance, and computational efficiency.<br>
+
+            In this study, we hope to overcome these issues by digging into the field of satellite picture classification. Through the deployment of several machine learning and deep learning methods, I hope to produce an effective and efficient interpretation solution for satellite imagery across a variety of areas.</p>
+            <div><a href="https://github.com/sreemathymahes/Satellite_Image_Classification/blob/main/Dataset.png">
+            <img src="https://raw.githubusercontent.com/sreemathymahes/Satellite_Image_Classification/main/Dataset.png" alt="Dataset">
+            </a></div>
+            <p><a href="https://github.com/sreemathymahes/Satellite_Image_Classification" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>Actual Evapo-Transpiration and Interception using WaPOR Data</h3>
+            <p>Study Area: Fezzan Region, Libya<br>
+
+Geographical Location:
+    The Fezzan region is located in southwestern Libya.
+    It is a large desert area encompassing parts of the Sahara Desert.<br>
+
+Climate: 
+    The region experiences a harsh desert climate with extreme temperatures.
+    Summers are extremely hot, while winters can be cold at night.
+    Precipitation is minimal, leading to arid conditions.<br>
+
+Topography:
+    The landscape is dominated by sand dunes, rocky plateaus, and mountains.
+    The region includes some oases, which are critical for local agriculture and settlements.<br>
+
+Significance of the Study:
+    Understanding actual evapotranspiration and interception (ETIa) is vital for water resource management.
+    ETIa data helps in planning agricultural activities and managing water resources efficiently.
+    The study contributes to the broader efforts of monitoring and mitigating the impacts of climate change in arid regions.</p>
+            <div><a href="https://github.com/sreemathymahes/Python_WAPOR/blob/main/summer.png">
+            <img src="https://raw.githubusercontent.com/sreemathymahes/Python_WAPOR/main/summer.png" alt="AETI">
+            </a></div>
+            <p><a href="https://github.com/sreemathymahes/Python_WAPOR" target="_blank">View on GitHub</a></p>
+        </div>
     </div>
 
     <footer>
@@ -93,5 +98,27 @@
         <p>Email: <a href="mailto:sreemathymahes@gmail.com">sreemathymahes@gmail.com</a></p>
         <p>Phone: +1 (506) 282-4092 | <a href="https://www.linkedin.com/in/sreemathymaheswaramoorthy/">LinkedIn</a></p>
     </footer>
+
+    <script>
+        // Function to open a modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Function to close a modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal if clicked outside the modal content
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName("modal");
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
