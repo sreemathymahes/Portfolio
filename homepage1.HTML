@@ -18,6 +18,13 @@
             padding: 20px;
             text-align: center;
         }
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            display: inline-block;
+        }
         .container {
             width: 80%;
             margin: 0 auto;
@@ -33,17 +40,24 @@
         .intro, .overview, .highlights {
             margin-bottom: 20px;
         }
-        .highlights ul {
-            list-style-type: none;
-            padding: 0;
+        .highlights {
+            margin-bottom: 20px;
         }
-        .highlights ul li {
+        .highlight {
             background: #fff;
             margin-bottom: 10px;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .highlight:hover {
+            background-color: #f0f8ff;
+        }
+        .highlight h3 {
+            margin: 0;
+            color: #010c0f;
         }
         a {
             color:#6ccdeb;
@@ -114,12 +128,17 @@
 
         <section class="highlights">
             <h2>Highlights of My Best Work</h2>
-            <ul>
-                <li onclick="openModal('modal1')">Time-Evolving 3D City Model</li>
-                <li onclick="openModal('modal2')">Satellite Image Classification</li>
-                <li onclick="openModal('modal3')">Actual Evapo-Transpiration and Interception using WaPOR Data</li>
-            </ul>
+            <div class="highlight" onclick="openModal('modal1')">
+                <h3>Time-Evolving 3D City Model</h3>
+            </div>
+            <div class="highlight" onclick="openModal('modal2')">
+                <h3>Satellite Image Classification</h3>
+            </div>
+            <div class="highlight" onclick="openModal('modal3')">
+                <h3>Actual Evapo-Transpiration and Interception using WaPOR Data</h3>
+            </div>
         </section>
+
     </div>
 
     <!-- Modals for each project -->
@@ -142,9 +161,9 @@
 Introduction: The rising availability of remote sensing (RS) imagery has spurred the demand for automatic interpretation algorithms, which are critical for a variety of applications including environmental monitoring, disaster management, and urban planning. The availability of benchmark datasets is a critical component in the development of such algorithms, as they serve as the foundation for training and assessing intelligent interpretation models specific to RS images. However, developing benchmark datasets for RS image interpretation presents considerable hurdles. These problems include correct dataset annotation, ensuring variety, controlling scale, and ensuring representativeness. Overcoming these challenges is critical for promoting the development of robust and dependable interpretation algorithms. Additionally, finding the right techniques and algorithm for RS image interpretation can be challenging. With the complexity and diversity of RS imagery, selecting an algorithm that can effectively analyze and interpret the data requires careful consideration of factors such as dataset characteristics, algorithm performance, and computational efficiency.
 
 In this study, we hope to overcome these issues by digging into the field of satellite picture classification. Through the deployment of several machine learning and deep learning methods, I hope to produce an effective and efficient interpretation solution for satellite imagery across a variety of areas.</p>
-            <p><a href="https://github.com/sreemathymahes/Satellite_Image_Classification/blob/main/Dataset.png">
+            <div><a href="https://github.com/sreemathymahes/Satellite_Image_Classification/blob/main/Dataset.png">
             <img src="https://raw.githubusercontent.com/sreemathymahes/Satellite_Image_Classification/main/Dataset.png" alt="Dataset">
-            </a></p>
+            </a></div>
             <p><a href="https://github.com/sreemathymahes/Satellite_Image_Classification" target="_blank">View on GitHub</a></p>
         </div>
     </div>
@@ -173,9 +192,9 @@ Significance of the Study:
     Understanding actual evapotranspiration and interception (ETIa) is vital for water resource management.
     ETIa data helps in planning agricultural activities and managing water resources efficiently.
     The study contributes to the broader efforts of monitoring and mitigating the impacts of climate change in arid regions.</p>
-            <p><a href="https://github.com/sreemathymahes/Python_WAPOR/blob/main/summer.png">
+            <div><a href="https://github.com/sreemathymahes/Python_WAPOR/blob/main/summer.png">
             <img src="https://raw.githubusercontent.com/sreemathymahes/Python_WAPOR/main/summer.png" alt="AETI">
-            </a></p>
+            </a></div>
             <p><a href="https://github.com/sreemathymahes/Python_WAPOR" target="_blank">View on GitHub</a></p>
         </div>
     </div>
