@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreemathy Maheswaramoorthy - GIS Analyst Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #6ccdeb;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        h2 {
+            margin-top: 10px;
+            color: #010c0f;
+        }
+        .intro, .overview, .highlights {
+            margin-bottom: 20px;
+        }
+        .highlights ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .highlights ul li {
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        a {
+            color:#6ccdeb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio!</h1>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>Hello! I’m <strong>Sreemathy Maheswaramoorthy</strong>, a passionate <strong>GIS Analyst</strong> with expertise in spatial and statistical analysis, GIS application development, and data management. I specialize in turning complex spatial data into insightful, actionable information to support decision-making and strategic planning.</p>
+        </section>
+
+        <section class="overview">
+            <h2>Brief Overview</h2>
+            <p>With a Master’s degree in Geodesy & Geomatics Engineering and a strong background in GIS technology, I bring over <strong>3 years</strong> of experience in various roles, including GIS Analyst, System Engineer, and GIS Intern. My career has been focused on leveraging GIS tools and technologies to solve real-world problems and drive efficiency in diverse projects.</p>
+        </section>
+
+        <section class="highlights">
+            <h2>Highlights of My Best Work</h2>
+            <ul>
+                <li onclick="openModal('modal1')">Time-Evolving 3D City Model</li>
+                <li onclick="openModal('modal2')">Satellite Image Classification</li>
+                <li onclick="openModal('modal3')">Actual Evapo-Transpiration and Interception using WaPOR Data</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Modals for each project -->
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Time-Evolving 3D City Model</h2>
+            <p>This project involved developing an interactive 3D model of Den Haag using FME Form and CesiumJS. The model dynamically showcases city evolution, enabling urban planners to visualize growth over time.</p>
+            <p><a href="https://github.com/yourgithubprofile/3d-city-model" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Satellite Image Classification</h2>
+            <p>This project focused on land use classification using Python and TensorFlow. It integrated ETL workflows for spatial data analysis and automated data processing pipelines.</p>
+            <p><a href="https://github.com/yourgithubprofile/satellite-image-classification" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Actual Evapo-Transpiration and Interception using WaPOR Data</h2>
+            <p>This project involved creating seasonal AETI maps for the Fezzen area using WaPOR data in Python. The results support water management decisions in semi-arid regions.</p>
+            <p><a href="https://github.com/yourgithubprofile/aeti-wapor" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Contact Information:</strong></p>
+        <p>Email: <a href="mailto:sreemathymahes@gmail.com">sreemathymahes@gmail.com</a></p>
+        <p>Phone: +1 (506) 282-4092 | <a href="https://www.linkedin.com/in/sreemathymaheswaramoorthy/">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // Function to open a modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Function to close a modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal if clicked outside the modal content
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName("modal");
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
